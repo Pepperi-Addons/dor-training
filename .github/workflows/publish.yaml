@@ -1,3 +1,11 @@
+name: PublishAddon
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
 jobs:
   oublish-addon:
     uses:  Pepperi-Addons/training-saar.g/.github/workflows/publish.yml@main
