@@ -8,4 +8,4 @@ on:
 
 jobs:
   oublish-addon:
-    uses:  Pepperi-Addons/training-saar.g/.github/workflows/publish.yml@main
+    uses:  Pepperi-Addons/development-guidelines/.github/workflows/publish.yml@master
