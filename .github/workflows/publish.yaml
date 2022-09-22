@@ -8,6 +8,6 @@ on:
 
 jobs:
   oublish-addon:
-    uses:  Pepperi-Addons/development-guidelines/.github/workflows/publish.yml@master
+    uses:  Pepperi-Addons/training-saar.g/.github/workflows/publish.yml@main
     secrets:
       PEPPERI_ADDON_PUBLISH_KEY: ${{ secrets.PEPPERI_ADDON_PUBLISH_KEY }}
