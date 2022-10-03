@@ -13,6 +13,7 @@ jobs:
       PEPPERI_ADDON_PUBLISH_KEY: ${{ secrets.PEPPERI_ADDON_PUBLISH_KEY }}
 
   test-on-jenkins:
+    needs: publish-addon 
     uses:  Pepperi-Addons/training-saar.g/.github/workflows/runJenkinsTests.yaml@main
     secrets:
       JENKINS_GITHUB_USER: ${{ secrets.JENKINS_GITHUB_USER }}
