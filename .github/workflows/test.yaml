@@ -1,0 +1,21 @@
+name: RunJenkinsTests
+
+on:
+  workflow_dispatch:
+    inputs:
+      shouldMarkAsUnavilableOnFail:
+        type: boolean
+        required: true
+        description: Should mark version as unavailable in case the tests fail
+        default: false
+
+jobs:
+
+  test-on-jenkins:
+    uses:  Pepperi-Addons/training-saar.g/.github/workflows/runJenkinsTests.yaml@main
+    secrets:
+      JENKINS_GITHUB_USER: ${{ secrets.JENKINS_GITHUB_USER }}
+      JENKINS_GITHUB_TOKEN: ${{ secrets.JENKINS_GITHUB_TOKEN }}
+      JENKINS_GITHUB_PASS: ${{ secrets.JENKINS_GITHUB_PASS }}
+      JENKINS_GITHUB_JOB: ${{ secrets.JENKINS_GITHUB_JOB }}
+      JENKINS_GITHUB_HOST: ${{ secrets.JENKINS_GITHUB_HOST }}
